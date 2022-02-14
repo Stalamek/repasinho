@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate, Switch } from 'react-router-dom';
 import Show from './Show';
 import AccessibleForwardIcon from '@mui/icons-material/AccessibleForward';
+import Adding from './Adding';
+import Edizao  from './Edizao'
 
 const drawerWidth = 240;
 
@@ -38,13 +40,19 @@ const Listed = () => {
                 >
                     <div style={{display: 'flex', justifyContent: 'center'}}>
                     <Link to='/puta'>
-                        <AccessibleForwardIcon /><p style={{paddingLeft: '16px'}}>quetal</p>
+                        <AccessibleForwardIcon /><span style={{paddingLeft: '16px'}}>quetal</span>
                     </Link>
                     </div>
                 </Drawer>
                 <Switch>
                     <Route path='/puta'>
                         <Show />
+                    </Route>
+                    <Route path='/adding'>
+                        <Adding />
+                    </Route>
+                    <Route path={`/:id`}>
+                        <Edizao />
                     </Route>
                 </Switch>
             </Box>

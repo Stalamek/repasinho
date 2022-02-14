@@ -2,6 +2,7 @@ import { Box, Toolbar, Typography, Button, TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import AnswerService from '../services/AnswerService';
 import Modal from "simple-react-modal";
+import { Link } from 'react-router-dom';
 
 
 const Show = () => {
@@ -13,7 +14,7 @@ const Show = () => {
     })
 
     const [agregar, setAgregar] = useState({
-        label:''
+        label: ''
     })
 
     const [open, setOpen] = useState(false)
@@ -101,11 +102,11 @@ const Show = () => {
                 <Button onClick={edizao}>Enviar</Button>
             </Modal>
             <Modal
-            show={openA}
-            onClose={closeAg}
+                show={openA}
+                onClose={closeAg}
             >
                 <form>
-                <TextField
+                    <TextField
                         label="nombre"
                         margin="normal"
                         variant="filled"
@@ -116,31 +117,36 @@ const Show = () => {
                 </form>
                 <Button onClick={agregarI}>Enviar</Button>
             </Modal>
-                <Toolbar />
-                <div>
-                    <div align="right" style={{fontSize: 20, fontWeight:'bold'}}>
-                        Probando
-                    </div>
-                    <div align='center'>
-                        <Button variant="contained" color='primary' onClick={openAg}>Agregar</Button>
-                    </div>
-                    {info.length ? info.map((i) => {
-                        return (
-                            <>
-                                <div style={{ fontSize: 17, display: 'flex', justifyContent: 'space-between', margin: 10, marginLeft: 20 }}>
-                                    <div>
-                                        {i.label}
-                                    </div>
-                                    <div>
-                                        <Button onClick={() => delInfo(i.id)} variant="contained" color='primary' style={{marginLeft: 5}} >Borrar</Button>
-                                        <Button onClick={() => openModal(i)} variant="contained" color='primary'style={{marginLeft: 5}} >Editar</Button></div>
-                                </div>
-                            </>
-                        )
-                    }) : null}
+            <Toolbar />
+            <div>
+                <div align="right" style={{ fontSize: 20, fontWeight: 'bold' }}>
+                    Probando
                 </div>
+                <div align='center'>
+                    <Link to='/adding'>
+                        <Button variant="contained" color='primary'>Agregar</Button>
+                    </Link>
+                </div>
+                {info.length ? info.map((i) => {
+                    return (
+                        <>
+                            <div style={{ fontSize: 17, display: 'flex', justifyContent: 'space-between', margin: 10, marginLeft: 20 }}>
+                                <div>
+                                    {i.label}
+                                </div>
+                                <div>
+                                    <Button onClick={() => delInfo(i.id)} variant="contained" color='primary' style={{ marginLeft: 5 }} >Borrar</Button>
+                                    <Link to={`/${i.id}`}>
+                                        <Button  variant="contained" color='primary' style={{ marginLeft: 5 }} >Editar</Button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </>
+                    )
+                }) : null}
+            </div>
 
-            
+
         </div>
     );
 };
