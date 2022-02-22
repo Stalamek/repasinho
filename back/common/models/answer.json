@@ -15,6 +15,9 @@
     "excluding": {
       "type": "boolean"
     },
+    "password": {
+      "type": "string"
+    },
     "value": {
       "type": "boolean"
     },

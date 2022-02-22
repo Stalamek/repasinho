@@ -10,7 +10,7 @@
     "BTModule": 1,
     "Quiz": 4,
     "Question": 22,
-    "Answer": 41,
+    "Answer": 48,
     "UserQuiz": 2,
     "UserAnswer": 3
   },
@@ -42,12 +42,9 @@
     },
     "Answer": {
       "6": "{\"value\":true,\"label\":\"Estado de los neumaticos\",\"questionId\":13,\"id\":6}",
-      "7": "{\"value\":true,\"label\":\"Estado de la verga\",\"questionId\":14,\"id\":7}",
-      "8": "{\"value\":true,\"label\":\"estado de motor\",\"questionId\":14,\"id\":8}",
+      "7": "{\"value\":true,\"label\":\"Estado de la pqwriadsnfw\",\"questionId\":14,\"id\":7}",
+      "8": "{\"value\":true,\"label\":\"estado del capot\",\"questionId\":14,\"id\":8}",
       "9": "{\"value\":true,\"label\":\"gasolina\",\"questionId\":14,\"id\":9}",
-      "24": "{\"value\":true,\"label\":\"o no\",\"questionId\":14,\"id\":24}",
-      "25": "{\"value\":true,\"label\":\"fede\",\"questionId\":14,\"id\":25}",
-      "26": "{\"value\":true,\"label\":\"ssdad\",\"questionId\":19,\"id\":26}",
       "27": "{\"value\":true,\"label\":\"Estado de los neumáticos\",\"questionId\":20,\"id\":27}",
       "28": "{\"value\":true,\"label\":\"Control nivel batería\",\"questionId\":21,\"id\":28}"
     },
